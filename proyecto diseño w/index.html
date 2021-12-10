@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equinox</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2? family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+ 
+</head>
+<body>
+    <!--Aqui empieza el inicio, encabezado y menu-->
+    <header class="header" id="inicio">
+        <img src="imagenes/hamburguesa.svg" alt="" class="hamburguer">
+        <nav class="menu-navegacion">
+            <!--Desplazamiento por anclas-->
+            <a href="#inicio">Inicio</a>
+            <a href="#servicio">Servicio</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#expertos">Expertos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="contenedor head">
+            <h1 class="titulo">Un sabor al ancance de todos</h1>
+            <p class="copy">EQUINOX</p>
+        </div>
+    </header>
+    <!--Todo el contenido principal-->
+    <main>
+        <!--Parte 1 apartado servicio-->
+        <section class="contenedor" id="servicio"> <!--se quita service a lado de class(no le veo la necesidad de momento)-->
+            <h2 class="subtitulo">Nuestro servicio</h2>
+            <div class="contenedor-servicio">
+                <img src="imagenes/comodidad.svg" alt="reunionIlustrativa">
+                <div class="checklist-servicio">
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">1</span>Precios accesibles</h3>
+                        <p>Nuestros precios son accesibles para todas las personas que quieran disfrutar del gran sabor de nuestros productos y el mejor trato de nuestros trabajadores.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">2</span>A la vanguardia</h3>
+                        <p>Contamos con gran variedad de alimentos ricos para todo tipo de degustación junto con la más alta calidad en sustentabilidad de utencilios biodegradables.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">3</span>Local</h3>
+                        <p>Nos encontramos en una ubicación amigable en la cual no te puedas preocupar por tu seguridad y pongas toda tu comodidad en nuestro local.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Parte 2 apartado de la galeria-->
+        <section class="gallery" id="galeria">
+            <div class="contenedor">
+                <h2 class="subtitulo">Galeria</h2>
+                <div class="contenedor-galeria">
+                    <img src="imagenes/helado.jpg" alt="" class="img-galeria">
+                    <img src="imagenes/pastel.jpg" alt="" class="img-galeria">
+                    <img src="imagenes/galleta.jpg" alt="" class="img-galeria">
+                    <img src="imagenes/healdo2.jpg" alt="" class="img-galeria">
+                    <img src="imagenes/donas.jpg" alt="" class="img-galeria">
+                    <img src="imagenes/bebida1.jpg" alt="" class="img-galeria">
+                </div>
+            </div>
+
+        <!--seccion para cerrar imagenes hacer correccion en la documentacion-->
+        <!--Esto es una parte de Js que quiero agregar-->
+        </section>
+        <section class="imagen-light">
+            <img src="imagenes/close.svg" alt="" class="cerrar">
+            <img src="imagenes/imagenEjemplo.jpg" alt="" class="agregar-imagen"> <!--imagen de ejemplo-->
+        </section>
+        <!--Parte 3 apartado de expertos en:-->
+        <section class="contenedor" id="expertos">
+            <h2 class="subtitulo">Expertos en:</h2>
+            <section class="experts">
+                <div class="cont-expert">
+                    <a href="menuCom.html">
+                        <img src="imagenes/postres.svg" alt="">
+                    </a>
+                    <h3 class="n-expert">Postres</h3>
+                </div>
+                <div class="cont-expert">
+                    <a href="menuCom.html">
+                        <img src="imagenes/helados.svg" alt="">
+                    </a>
+                    <h3 class="n-expert">Helados</h3>
+                </div>
+                <div class="cont-expert">
+                    <a href="menuCom.html">
+                        <img src="imagenes/bebidas.svg" alt="">
+                    </a>
+                    <h3 class="n-expert">Bebidas</h3>
+                </div>
+                <div class="cont-expert">
+                    <a href="menuCom.html">
+                        <img src="imagenes/Promociones.svg" alt="">
+                    </a>
+                    <h3 class="n-expert">Promociones</h3>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <!--apartado del contacto-->
+    <!--apartado de footer-->
+    <footer id="contacto">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <!--con brand podemos poner el nombre de nuestra marca-->
+                <h2 class="brand">Equinox</h2>
+                <p>Expertos en endulzar tu día</p>
+                <p>Eric Armando PW</p>
+            </div>
+            <!--Boxicons-->
+            <!--Las i class se copiaron como font desde la pagina de Boxicons-->
+            <div class="social-media">
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter' ></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram' ></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Apartado del script-->
+    <!--voy a usar lightbox para ver una version mas ampliada de las imagenes-->
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+
+</body>
+</html>

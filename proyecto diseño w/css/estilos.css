@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/*use una pseudoclase*/
+:root{
+    scroll-behavior: smooth; /*controlamos el comportamiento del scroll*/
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    /*todo lo que desborde se oculte*/
+    overflow: hidden;
+    margin: auto; /*para que lo centre todo*/
+    padding: 60px 0px;
+}
+
+/*comineza el head y header*/
+
+header{
+    height: 100vh; /*100% de lo que opcupa la pantalla*/
+    background-image: linear-gradient(to top, rgba(159, 138, 208, 0.445) 0%, rgba(251, 194, 235, 0.514) 100%), url(../imagenes/cabecera1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+/*comienza la barra lateral que es el menu*/
+
+.hamburguer{
+    position: fixed; /*fijo en toda la pagina*/
+    z-index: 10; /*para superponer el menu*/
+    top: 30PX;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer; /*para que se ponga la manita*/
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column; /*marca mi menu en columna*/
+    justify-content: space-evenly; /*los centra verticalmente y equitativo*/
+    align-items: center;
+    /*transition: transform .3s ease-in-out; un timing function*/
+    transform: translate(110%); /*por si no queremos usar otra funcion*/
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5); /*efecto de sombra alrededor del marco*/
+
+}
+
+/*header:hover .menu-navegacion{ para ver como va a ser el menu en header cuando haga hover
+    transform: translate(110%);
+}*/
+
+/*Agregue una clase extra (cuando de clic al boton aparezaca de nuevo el menu)*/
+.spread{
+    transform: translate(0);
+}
+
+.menu-navegacion a{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;  
+}
+
+/*Aqui comineza la parte de nuestros servicios*/
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color: #9f8ad0;
+    margin-bottom: 40px;
+    font-size: 40px; 
+}
+
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /*Si ya no caben los elementos se pasaran hacia abajo*/
+
+}
+
+.contenedor-servicio.img{
+    width: 40%;
+}
+
+.checklist-servicio{
+    width: 40%;
+}
+
+.service{
+    margin-bottom: 20px;
+}
+
+.n-service{
+    margin-bottom: 7px;
+    color: #9f8ad0;
+}
+
+.number{
+    display: inline-block; /*para poderle dar width y hight*/
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px; /*para que ser verticalmente igual*/
+    margin-right: 5px;
+}
+
+.gallery{
+    background: #f2f2f2;
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria{
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.imagen-light{
+    position: fixed; /*que se fije a la pagina*/
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+
+}
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen{
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s; /*.2s de retraso*/
+}
+
+.showImage{ /*se agrega esta clase cuando se de clic a la imagen*/
+    transform: scale(1);
+}
+
+.close{
+    position: absolute; /*su padre esta fijo*/
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+     
+}
+
+/*apartado de expertos en:*/
+
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /*por si ya no caben se pasen para abajo*/
+
+}
+
+.cont-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-expert img{
+    width: 80%;
+    display: block;
+    margin:0 auto; /*margen a los lados*/
+}
+
+.n-expert{ /*documentacion: error, cambio de cont por n, no los alinea*/
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%; /*tambien puedo sustituir 100% por block*/
+    font-weight: 400;
+}
+
+/*Apartado del footer*/
+
+footer{
+    background: #9f8ad0;
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between; /*para que se ponga uno al lado de otro*/
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/*apartado de contact-us*/
+
+.contact-us{
+    width: 40%;
+    color: #fff;
+}
+
+/*apartado brand: nombre de la marca Equinox*/
+.brand{
+    font-weight: 500; /*peso o grueso de la letra*/
+    font-size: 40px; /*dimension de la letra*/
+}
+
+/*apartado del parrafo Exp. en endulzar tu dia*/
+.brand+p{
+    font-weight: 500;
+
+}
+
+/*iconos de social-media*/
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; /*que se pongan al final de contenedor*/
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon:hover{
+    background: #fff;
+    color: #764ba2;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
